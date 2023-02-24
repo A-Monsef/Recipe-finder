@@ -1,0 +1,413 @@
+@font-face {
+    font-family: 'Nunito Sans';
+    src: url(fonts/Nunito-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans',sans-serif;
+}
+body{
+    background: linear-gradient(to bottom right,#fbdb89,#f48982);
+    background-repeat: no-repeat;
+    background-size: cover;
+    line-height: 1.6;
+    font-weight: 400;
+}
+.mycontainer{
+    width: 80%;
+    margin: 5% auto;
+    background-color: #f9f5f3;
+    border-radius: 10px;
+    box-shadow: 0 30px 90px 8px #574e4c33;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+.messageAlert{
+    background-color: white;
+    width: 300px;
+    height: 150px;
+    text-align: center;
+    padding: 30px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;   
+    display: none;
+}
+.messageAlert i{
+    color: orange;
+}
+.bookmark:hover +.messageAlert{
+    display: block;
+}
+.bookmark_container{
+    width: 380px;
+    height: auto;
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+    color: #615551;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    transform: .5s;
+    z-index: 99;
+
+}
+.bookmark:hover + .bookmark_container {
+    display: block;
+}
+.bookmark_container:hover {
+    display: block;
+}
+.bookmark_container i{
+    color: #f48982;
+    font-size: 25px;
+    margin-right: 5px;
+
+}
+.bookmark_container .bookmarkAlert{
+    color: #615551;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 30px;
+}
+.logo{
+    width: 140px;
+}
+.logo img{
+    width: 100%;
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar li{
+    list-style: none;
+}
+.navbar li:first-child{
+    margin-right: 20px;
+}
+.navbar a{
+    text-decoration: none;
+    color: #615551;
+    font-weight: 600;
+}
+.navbar a i{
+    color: rgb(255, 136, 0);
+    font-size: 20px;
+    margin-right: 5px;
+}
+.navbar form{
+    position: relative;
+}
+.navbar input{
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50px;
+    width: 350px;
+    font-size: 17px;
+    outline: none;
+
+}
+::placeholder{
+    color: rgb(194, 193, 193);
+}
+#search button{
+    cursor: pointer;
+    background-image: linear-gradient(to bottom right,#fbdb89,#f48982);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 15px 40px;
+    position: absolute;
+    right: -100px;
+    top: 0;
+    bottom: 0;
+}
+.main{
+    display: flex;
+}
+.main .asidebar{
+    background-color: white;
+    width: 35%;
+    height: 1000px;
+    position: relative;
+    padding: 20px 0;
+
+}
+.copyright{
+   
+    color: #918581;
+    padding: 10px;
+    font-size: 15px;
+    position: absolute;
+    bottom: 0;
+}
+.copyright p{
+    font-size: 12px;
+}
+.menu{
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px;
+    font-size: 17px;
+    font-weight: 600;
+}
+.menu i{
+    color: orange;
+    font-size: 20px;
+}
+.addrecipe{
+    display: flex;
+}
+.addrecipe input{
+    border: 2px solid rgb(237, 237, 237) ;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+}
+.btnUpload{
+    text-align: center;
+}
+
+.btnUpload button{
+    width: 200px;
+    cursor: pointer;
+    background-image: linear-gradient(to bottom right,#fbdb89,#f48982);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 15px 40px;
+}
+.divMenu{
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+}
+.divMenu:hover{
+    background-color: #eaeaea;
+}
+.divMenu .imageMenu{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.menuDesc{
+    margin-left: 15px;
+   
+}
+
+/* main */
+main{
+    background-color: transparent;
+    width: 65%;
+    text-align: center;
+    border-radius: 0 0 10px 0;
+    position: relative;
+}
+.mainAlert{   
+    color: #615551;
+    font-size: 20px;
+    font-weight: 600;
+    width: 40%;
+    margin: 50px auto 0;
+}
+
+main p i {
+    color: #f48982;
+    font-size: 25px;
+    margin-right: 5px;
+}
+.recipeImg{
+    height: 350px;
+    position: relative;
+}
+.recipeImg:before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    opacity: .5;
+    background: linear-gradient(to bottom right,#fbdb89,#f48982);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.recipeImg img{
+    width: 100%;
+    height: 100%;
+    
+}
+.recipeImg h1{
+    background: linear-gradient(to bottom right,#fbdb89,#f48982);
+    width: 45%;
+    text-align: center;
+    padding: 5px;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 1.5;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,10%)rotate(-10deg);
+}
+.recipeImg h1 span{
+    color: white; 
+}
+.recipeDetails{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0 30px;
+}
+.bookmarkIcon {
+    border-radius: 50% !important;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right,#fbdb89,#f48982);
+    transition: .3s;
+    margin-top: -20px;
+    cursor: pointer;
+}
+.bookmarkIcon:hover{
+    transform: scale(1.05);
+}
+.bookmarkIcon i{
+    font-size: 22px;
+    color: white;
+}
+.recipeInfo h6{
+    font-size: 18px;
+    margin-right: 15px;
+}
+.recipeInfo h6 span{
+   font-family: 'NunitoBold';
+}
+.recipeInfo i{
+    color: #f38e90;
+    margin-right: 5px;
+    font-size: 22px;
+}
+.recipeInfo{
+    display: flex;
+    justify-content: center;
+}
+.servingIco{
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f38e90;
+    border-radius: 50%;
+    color: #f38e90;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.recipeIngredient{
+    background-color: #f2efee;
+    padding: 50px 30px;
+    overflow: hidden;
+}
+.recipetDetails{ 
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+main h4{
+    color: #f48982;
+   font-family: 'NunitoBold';
+   margin-bottom: 30px;
+}
+.ingredientDetail{
+    width: 42%;
+    text-align: left;
+    margin-bottom: 20px;
+    display: flex;
+}
+.recipeIngredient i{
+    color: #f38e90;
+    font-size: 22px;
+    margin-right: 10px;
+}
+.webSite{
+    padding: 50px 30px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
+.webSite p{
+    width: 80%;
+    margin: 0 auto 30px;
+    color: #615551;
+    font-size: 17px;
+}
+.webSite p span{
+    font-family: 'NunitoBold';
+}
+.webSite button{
+    width: 200px;
+    margin: auto;
+    
+}
+.webSite button i{
+    color: white;
+    margin-left: 10px;
+}
+.asideContainer{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 20px;
+}
+.asideContainer:hover{
+    background-color: #f9f5f3;
+}
+.asideContainer p{
+   margin: 5px 0px 2px 15px;
+
+}
+#trecipeTitle{
+    color: #f38e90;
+    font-size: 17px;
+}
+#trecipeDesc{
+    color: #9193b1;
+}
+.asidebar img, .bookmarkImg {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.btn_pagination{
+    margin: 10px 20px;
+    background-color: #f9f5f3;
+    color: #f38e90;
+    border-radius: 50px;
+    width: 120px;
+    border: none;
+    height: 30px;
+}

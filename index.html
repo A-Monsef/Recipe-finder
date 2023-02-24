@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a4f9ee6ea0.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Recipe</title>
+</head>
+
+<body>
+    <div class="mycontainer">
+        <!-- ----------------------------------------------Navbar-------------------------------------------------------- -->
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.8a7af738.png" alt="">
+            </div>
+            <form id="search">
+                <input type="text" name="" id="inputValue" placeholder="Search over ,000,000 recipes...">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+            </form>
+            <ul>
+                <li><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                            class="fa-regular fa-pen-to-square"></i>Add Recipe</a></li>
+                <div class="modal fade" id="exampleModal" tabindex="-" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="addrecipe">
+                                    <div class="col-6">
+                                        <h3 class="upload__heading">Recipe data</h3>
+                                        <div>
+                                            <label class="col-2">Title</label>
+                                            <input class="col-10" value="TEST23" required="" name="title" type="text">
+                                        </div>
+                                        <div>
+                                            <label class="col-2">URL</label>
+                                            <input class="col-10" value="TEST23" required="" name="sourceUrl"
+                                                type="text">
+                                        </div>
+                                        <div>
+                                            <label class="col-2">Image URL</label>
+                                            <input class="col-10" value="TEST23" required="" name="image" type="text">
+                                        </div>
+                                        <div>
+                                            <label class="col-2">Publisher</label>
+                                            <input class="col-10" value="TEST23" required="" name="publisher"
+                                                type="text">
+                                        </div>
+                                        <div>
+                                            <label class="col-2">Prep time</label>
+                                            <input class="col-10" value="23" required="" name="cookingTime"
+                                                type="number">
+                                        </div>
+                                        <div>
+                                            <label class="col-2">Servings</label>
+                                            <input class="col-10" value="23" required="" name="servings" type="number">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <h3 class="upload__heading">Ingredients</h3>
+                                        <div>
+                                            <label class="col-2">Ingredient </label>
+                                            <input class="col-10" value="0.5,kg,Rice" type="text" required=""
+                                                name="ingredient-" placeholder="Format: 'Quantity,Unit,Description'">
+                                        </div>
+                                        <div>
+                                            <label class="col-2">Ingredient 2</label>
+                                            <input class="col-10" value=",,Avocado" type="text" name="ingredient-2"
+                                                placeholder="Format: 'Quantity,Unit,Description'">
+                                        </div>
+                                        <div>
+                                            <label class="col-2">Ingredient 3</label>
+                                            <input class="col-10" value=",,salt" type="text" name="ingredient-3"
+                                                placeholder="Format: 'Quantity,Unit,Description'">
+                                        </div>
+                                        <div>
+                                            <label class="col-2">Ingredient 4</label>
+                                            <input class="col-10" type="text" name="ingredient-4"
+                                                placeholder="Format: 'Quantity,Unit,Description'">
+                                        </div>
+                                        <div>
+                                            <label class="col-2">Ingredient 5</label>
+                                            <input class="col-10" type="text" name="ingredient-5"
+                                                placeholder="Format: 'Quantity,Unit,Description'">
+                                        </div>
+                                        <div>
+                                            <label class="col-2">Ingredient 6</label>
+                                            <input class="col-10" type="text" name="ingredient-6"
+                                                placeholder="Format: 'Quantity,Unit,Description'">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btnUpload" id="btnSearch">
+                                    <!-- <button type="button" class="btn btn-primary">Upload</button> -->
+                                    <button><i class="fa-solid fa-cloud-arrow-up p-"></i>upload</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <li class="bookmark"><a href=""><i class="fa-regular fa-bookmark"></i></i>Book Marks</a> </li>
+                <div class="messageAlert">
+                    <p><i class="fa-solid fa-triangle-exclamation"></i> </i>No bookmarks yet. Find a nice recipe and
+                        bookmark it ;)</p>
+                </div>
+            </ul>
+
+        </div>
+
+        <div class="main">
+            <!-- ----------------------------------------------Aside-------------------------------------------------------- -->
+            <div class="asidebar">
+                <div class="loader"></div>
+                <div>
+                    <div class="results"></div>
+                    <input type="button" class="btn_pagination" id="prev" value="page 1"></input>
+                    <input type="button" class="btn_pagination" id="next" value="page 2"></input>
+                </div>
+                <div class="copyright">
+                    <p>
+                        © Copyright by <span><a class="twitter-link" target="_blank"
+                                href="https://twitter.com/jonasschmedtman">Jonas Schmedtmann</a></span>
+                        . Use for learning or your portfolio. Don't use to teach. Don't claim as your own.
+                    </p>
+                </div>
+            </div>
+            <!-- ----------------------------------------------Menu-------------------------------------------------------- -->
+                <main>
+                    <p class="mainAlert"><i class="fa-regular fa-face-smile"></i> Start by searching for a recipe or an ingredient. Have fun!</p>
+                    <div class="loaderMain"></div>
+                    <div>
+                </main>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
